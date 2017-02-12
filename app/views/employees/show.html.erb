@@ -1,0 +1,15 @@
+<% if @employee["first_name"] %>
+  <h1>Employee Info</h1>
+
+  <div>
+    First Name: <%= @employee["first_name"] %>
+  </div>
+  <div>
+    Last Name: <%= @employee["last_name"] %>
+  </div>
+  <div>
+    Email: <%= @employee["email"] %>
+  </div>
+
+  <%= link_to "Remove", "/employees/#{@employee["id"]}", method: :delete %>
+<% end %>
